@@ -1,0 +1,59 @@
+Chainlink Data Feeds:
+
+eth: 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419
+bsc: 0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE
+avax: 0x0A77230d17318075983913bC2145DB16C7366156
+poly: 0xAB594600376Ec9fD91F8e885dADF0CE036862dE0  
+
+
+Deploy contract:
+yarn hardhat run scripts/item.js --network mumbai
+yarn hardhat flatten contracts/ItemFuse.sol > flattened/FlattenedItemFuse.sol
+
+
+Add 34 new items:
+total supplies
+[10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000]
+prices in usd
+[999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999]
+Chainlink Data Feeds:
+Goerli: 0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e
+BSC Test: 0x2514895c72f50D8bd4B4F9b1110F0D6bD2c97526
+Fuji: 0x5498BB86BC934c8D34FDA08E81D444153d0D06aD
+Mumbai: 0xd0D5e3DB44DE05E9F294BB0a3bEEaF030DE24Ada
+
+
+Deployed mannet contracts:
+
+eth
+Access Pass: 
+Item: 
+
+bsc
+Access Pass: https://bscscan.com/address/0x8BcF36ef04BD4bEb465991247a9cdb7a0A9a2B31
+Item: https://bscscan.com/address/0xc8D9DEE0B5bB01306c01927daEa5bDc8219e489B#code
+
+avax
+Access Pass: https://snowtrace.io/address/0x8BcF36ef04BD4bEb465991247a9cdb7a0A9a2B31  
+Item: https://snowtrace.io/address/0xc8D9DEE0B5bB01306c01927daEa5bDc8219e489B
+
+polygon
+Access Pass: https://polygonscan.com/address/0x8BcF36ef04BD4bEb465991247a9cdb7a0A9a2B31
+Item: https://polygonscan.com/address/0xc8D9DEE0B5bB01306c01927daEa5bDc8219e489B
+
+https://medium.com/@empireofsight
+https://github.com/Empire-Of-Sight
+https://twitter.com/EmpireOfSight
+https://discord.com/invite/kShT4GCTpQ
+
+Empire of Sight
+business@empireofsight.com
+https://www.empireofsight.com/
+https://www.empireofsight.com/favicon32.png
+
+Empire of Sight is an MMORPG built on Blockchain technology, pushing the bounds of what was thought possible for the Web3 space.
+
+
+ID #0: Eternal Health Potion
+ID #5: Majestic Mana Potion
+ID #6: Allies Helm
