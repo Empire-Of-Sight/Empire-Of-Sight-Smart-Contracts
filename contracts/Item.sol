@@ -154,15 +154,7 @@ contract Item is ERC1155, Ownable, ReentrancyGuard {
 
     /// @dev Initializes the contract with default values and item types.
     constructor()
-        ERC1155(
-            string(
-                abi.encodePacked(
-                    "https://empireofsight.com/metadata/items/",
-                    itemIds.toString(),
-                    ".json"
-                )
-            )
-        )
+        ERC1155("https://empireofsight.com/metadata/items/{id}.json")
     {
         _priceOracle = AggregatorV3Interface(
             0xAB594600376Ec9fD91F8e885dADF0CE036862dE0
@@ -223,6 +215,19 @@ contract Item is ERC1155, Ownable, ReentrancyGuard {
         }
 
         itemIds = 39;
+    }
+
+    function uri(
+        uint256 _tokenid
+    ) public pure override returns (string memory) {
+        return
+            string(
+                abi.encodePacked(
+                    "https://empireofsight.com/metadata/items/",
+                    Strings.toString(_tokenid),
+                    ".json"
+                )
+            );
     }
 
     ///-------------------------------------------------------------------------

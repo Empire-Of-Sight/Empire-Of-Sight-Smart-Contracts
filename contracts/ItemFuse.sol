@@ -21,6 +21,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "./SupraOracles/ISupraSValueFeed.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 /// @title Empire of Sight Item Contract
 /// @dev Extends ERC-1155 basic standard multi-token implementation with various features for the highest safety
@@ -30,6 +31,7 @@ import "./SupraOracles/ISupraSValueFeed.sol";
 contract ItemFuse is ERC1155, Ownable, ReentrancyGuard {
     /// Solidity's arithmetic operations with added overflow checks.
     using SafeMath for uint256;
+    using Strings for uint256;
 
     /// All the attributes of an item
     struct ItemInfo {
@@ -145,7 +147,7 @@ contract ItemFuse is ERC1155, Ownable, ReentrancyGuard {
 
     /// @dev Initializes the contract with default values and item types.
     constructor()
-        ERC1155("https://empireofsight.com/metadata/items/{itemIds}.json")
+        ERC1155("https://empireofsight.com/metadata/items/{id}.json")
     {
         address sValueFeed_ = 0x79E94008986d1635A2471e6d538967EBFE70A296;
         sValueFeed = ISupraSValueFeed(sValueFeed_);
@@ -205,6 +207,19 @@ contract ItemFuse is ERC1155, Ownable, ReentrancyGuard {
         }
 
         itemIds = 39;
+    }
+
+    function uri(
+        uint256 _tokenid
+    ) public pure override returns (string memory) {
+        return
+            string(
+                abi.encodePacked(
+                    "https://empireofsight.com/metadata/items/",
+                    Strings.toString(_tokenid),
+                    ".json"
+                )
+            );
     }
 
     ///-------------------------------------------------------------------------
